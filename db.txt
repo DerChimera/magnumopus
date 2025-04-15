@@ -1,0 +1,76 @@
+-- Создание таблицы пользователей
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    role VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Создание таблицы команды (сотрудники)
+CREATE TABLE team (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    position VARCHAR(255) NOT NULL,
+    bio TEXT
+);
+
+-- Создание таблицы услуг
+CREATE TABLE services (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price NUMERIC NOT NULL,
+    image_url VARCHAR(255)
+);
+
+-- Создание таблицы отзывов
+CREATE TABLE reviews (
+    id UUID PRIMARY KEY,
+    user_id UUID NOT NULL,
+    text TEXT NOT NULL,
+    rating INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Создание таблицы записей на услуги
+CREATE TABLE appointments (
+    id UUID PRIMARY KEY,
+    user_id UUID NOT NULL,
+    service_id UUID NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (service_id) REFERENCES services(id) ON DELETE CASCADE
+);
+
+
+-- Создание таблицы ролей администраторов
+CREATE TABLE admin_roles (
+    id UUID PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Создание таблицы администраторов
+CREATE TABLE admins (
+    id UUID PRIMARY KEY,
+    user_id UUID NOT NULL,
+    role_id UUID NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (role_id) REFERENCES admin_roles(id) ON DELETE RESTRICT
+);
+
+-- Вставка базовых ролей администраторов
+INSERT INTO admin_roles (id, name, description)
+VALUES 
+    (gen_random_uuid(), 'super_admin', 'Главный администратор с полными правами доступа'),
+    (gen_random_uuid(), 'admin', 'Обычный администратор с ограниченными правами доступа');

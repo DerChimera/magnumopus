@@ -1,0 +1,113 @@
+.team-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f6f7;
+}
+
+.team-hero {
+  background: linear-gradient(120deg, #e0eafc 60%, #cfdef3 100%);
+  color: #1a365d;
+  padding: 4rem 2rem 2rem 2rem;
+  text-align: center;
+}
+
+.team-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #1761a0;
+}
+
+.team-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  min-height: 370px;
+}
+
+.team-card:hover {
+  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.18);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.team-photo-placeholder {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #e0eafc 60%, #cfdef3 100%);
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1761a0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+}
+
+.team-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a365d;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.team-role {
+  color: #2980b9;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.team-exp {
+  color: #7f8c8d;
+  font-size: 0.98rem;
+  margin-bottom: 0.7rem;
+}
+
+.team-desc {
+  color: #2c3e50;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .team-hero h1 {
+    font-size: 2rem;
+  }
+  .team-grid {
+    padding: 2rem 1rem 3rem 1rem;
+    gap: 1.5rem;
+  }
+  .team-card {
+    padding: 1.5rem 1rem 1rem 1rem;
+    min-height: 0;
+  }
+  .team-photo-placeholder {
+    width: 80px;
+    height: 80px;
+    font-size: 0.95rem;
+  }
+}

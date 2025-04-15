@@ -12,6 +12,7 @@
 /build
 
 # misc
+supabaseClient.js
 .DS_Store
 .env.local
 .env.development.local
@@ -21,3 +22,38 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# dotenv environment files
+.env
+.env.*
+
+# IDE and editor folders
+.idea/
+.vscode/
+.history/
+
+# System files
+Thumbs.db
+desktop.ini
+
+# OS generated files
+*.swp
+*.swo
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Database and backup files
+*.sqlite
+*.db
+*.bak
+
+# Certificates and secrets
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.cert
+*.secret

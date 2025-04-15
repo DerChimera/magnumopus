@@ -1,0 +1,152 @@
+.appointment-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F5F6F7;
+}
+
+.appointment-hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9));
+  color: #ECF0F1;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.appointment-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.appointment-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.appointment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.appointment-form {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #BDC3C7;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #2C3E50;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498DB;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980B9;
+}
+
+.appointment-info {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.appointment-info h2 {
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.appointment-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.appointment-info li {
+  color: #7F8C8D;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.appointment-info li::before {
+  content: "•";
+  color: #3498DB;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .appointment-hero h1 {
+    font-size: 2rem;
+  }
+
+  .appointment-hero p {
+    font-size: 1rem;
+  }
+
+  .appointment-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-form,
+  .appointment-info {
+    padding: 1.5rem;
+  }
+} 
