@@ -167,7 +167,7 @@ const Contact = () => {
         <h2>Как нас найти</h2>
         <div className="map-container" style={{padding:0, height:'400px', background:'#fff', borderRadius:'10px', overflow:'hidden', display:'flex', alignItems:'center', justifyContent:'center'}}>
           <img
-            src="https://maps.googleapis.com/maps/api/staticmap?center=42.84052869623984,74.60100717674804&zoom=13&size=1200x400&markers=color:red%7C42.84052869623984,74.60100717674804&key=AIzaSyAkJdGITYxayNZx0XAcfmKJvD8VeXJ7o3s"
+            src="https://maps.googleapis.com/maps/api/staticmap?center=42.84052869623984,74.60100717674804&zoom=13&size=1200x400&markers=color:red%7C42.84052869623984,74.60100717674804&key=xxx"
             alt="Карта проезда"
             style={{width:'100%', height:'100%', objectFit:'cover', borderRadius:'10px', border:'none'}}
           />
