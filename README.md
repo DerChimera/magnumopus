@@ -1,1 +1,1 @@
-# Diplom mazafaka web app prototype 
+# Diplom web app prototype 
