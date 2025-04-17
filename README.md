@@ -1,1 +1,1 @@
-# Diplom web app prototype 
+# ВКР web app prototype 
